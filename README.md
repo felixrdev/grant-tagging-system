@@ -1,7 +1,7 @@
 # Grant Tagging System
-[![CI](https://github.com/YOUR_USERNAME/lasso-grant-tagging-system/workflows/CI/badge.svg)](https://github.com/YOUR_USERNAME/lasso-grant-tagging-system/actions)
+[![CI](https://github.com/felixrdev/lasso-grant-tagging-system/workflows/CI/badge.svg)](https://github.com/felixrdev/lasso-grant-tagging-system/actions)
 
-Deterministic grant tagging and synonym-aware search built with React and Flask. Fast, transparent, and extendable—no LLM required (optional refinement supported).
+Deterministic grant tagging and synonym-aware search built with React and Flask.
 
 Add grants (name + description) and automatically get tags like `agriculture`, `education`, or `soil`. Filter and search grants by tags or synonyms (e.g., "learning" → `education`, "irrigation" → `water`).  
 
