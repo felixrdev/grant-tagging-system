@@ -1,0 +1,15 @@
+{
+  "name": "grant-tagging-system",
+  "version": "1.0.0",
+  "description": "Grant tagging system monorepo",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter frontend dev",
+    "build": "pnpm --filter frontend build",
+    "test": "pnpm --filter frontend test",
+    "fmt": "pnpm --filter frontend fmt"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,36 @@
+services:
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: grant-tagging-web
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - node_modules:/app/node_modules
+    environment:
+      - NODE_ENV=development
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - api
+    restart: unless-stopped
+
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: grant-tagging-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - ./data:/data:ro
+    environment:
+      - FLASK_ENV=development
+      - PORT=8000
+      - FLASK_APP=app.py
+    restart: unless-stopped
+
+volumes:
+  node_modules:

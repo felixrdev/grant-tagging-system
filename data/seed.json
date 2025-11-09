@@ -1,0 +1,28 @@
+{
+  "grants": [
+    {
+      "id": 1,
+      "title": "Education Innovation Grant",
+      "description": "Supporting innovative approaches to K-12 education",
+      "amount": 50000,
+      "tags": ["education", "innovation", "k12"],
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "title": "Community Health Initiative",
+      "description": "Improving community health outcomes through targeted interventions",
+      "amount": 75000,
+      "tags": ["health", "community", "prevention"],
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "title": "STEM Research Fellowship",
+      "description": "Supporting graduate research in science, technology, engineering, and mathematics",
+      "amount": 100000,
+      "tags": ["research", "stem", "fellowship"],
+      "status": "active"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend.prod
+    ports:
+      - "8000:8000"
+    environment:
+      - FLASK_ENV=production
+      - PORT=8000
+      - ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-https://yourdomain.com}
+    volumes:
+      - grant-data:/app/storage
+    restart: unless-stopped
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend.prod
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  grant-data:
